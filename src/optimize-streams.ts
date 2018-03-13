@@ -27,9 +27,9 @@ import matcher = require('matcher');
 import {resolveBareSpecifiers} from './babel-plugin-bare-specifiers';
 
 const babelSyntaxPlugins = [
-  'babel-plugin-syntax-dynamic-import',
-  'babel-plugin-syntax-object-rest-spread',
-].map(require);
+  require('babel-plugin-syntax-dynamic-import'),
+  require('babel-plugin-syntax-object-rest-spread'),
+];
 const babelPresetMinify =
     require('babel-preset-minify')({}, {simplifyComparisons: false});
 const babelPresetES2015NoModules =
